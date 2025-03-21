@@ -13,7 +13,7 @@ app = FastAPI()
 # Configuración
 load_dotenv()
 #ABUSEIPDB_API_KEY = os.getenv('ABUSEIPDB_API_KEY')
-ABUSEIPDB_API_KEY = "7c1e577cc11b38f152078b592ed68cfd88ad686c0362418a93cf46b6e59c2e3760589897c1646ff3"
+ABUSEIPDB_API_KEY = ""
 if not ABUSEIPDB_API_KEY:
     raise ValueError("ABUSEIPDB_API_KEY environment variable not set")
 RATE_LIMIT = 60  # Límite de peticiones por IP en 60 segundos
