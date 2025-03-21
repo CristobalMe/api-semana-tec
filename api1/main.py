@@ -31,6 +31,10 @@ def validate_input(data: str):
         raise HTTPException(status_code=400, detail="Datos demasiado largos")
     if re.search(r"[<>/'\"]", data):
         raise HTTPException(status_code=400, detail="Entrada con caracteres sospechosos")
+    
+@app.get("/")
+async def read_root():
+    return {"message": "La API está en funcionamiento"}
 
 # Middleware de seguridad
 @app.middleware("http")
